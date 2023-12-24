@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}">
+    
+    <title>Project CFP</title>
+</head>
+<body>
+    <div class="body-container">
+        <div class="sidenav">
+            <h1 class="title">Project CFP</h1>
+            <div class="list-tabs">
+                <a href="#" class="tab active">Generator</a>
+                <a href="#" class="tab">Calendar</a>
+                <a href="#" class="tab">Settings</a>
+            </div>
+            <div class="action">
+                <a href="#" class="btn logout">Logout</a>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="content">
+                <div class="header-sec">
+                    <h1>CFP Generator</h1>
+                    <p>Create a Call for Proposals with AI</p>
+                </div>
+                <div class="main-body-sec">
+                    <a href="#" class="btn">Generate CFP</a>
+                    <div class="generated-content">
+                        Generated CFP will appear here
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
