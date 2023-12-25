@@ -24,7 +24,25 @@
                 <a href="#" class="btn logout">Logout</a>
             </div>
         </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <h1 class="title">Project CFP</h1>
+            <div class="list-tabs">
+                <a href="#" class="tab active">Generator</a>
+                <a href="#" class="tab">Calendar</a>
+                <a href="#" class="tab">Settings</a>
+            </div>
+            <div class="action">
+                <a href="#" class="btn logout">Logout</a>
+            </div>
+        </div>
         <div class="right-section">
+            <div class="nav-trigger" id="nav-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="content">
                 <div class="header-sec">
                     <h1>CFP Generator</h1>
@@ -39,6 +57,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const navTrigger = document.getElementById("nav-trigger")
+        const sidebar = document.getElementById("sidebar")
+        navTrigger.addEventListener("click", ()=>{
+            navTrigger.classList.toggle("active")
+            sidebar.classList.toggle("active")
+        })
+    </script>
 
 </body>
 </html>
