@@ -1,0 +1,31 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+<div class="left">
+    <div class="header-section">
+        <h3 class="logo">Logo</h3>
+        <div class="action">
+            <a href="{% url 'register04' %}" class="btn back-btn"><i class="bx bx-chevron-left"></i>Previous</a>
+            <a href="#" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="form4-section">
+        <h4>Generate App Password for MailTrace</h4>
+        
+        <form action="">
+           
+            
+            
+            <div class="steps">
+                <span class="step">1  Enable IMAP in your Gmail settings here</span>
+                <span class="step">2  Enable 2-Factor Authentication</span>
+                <span class="step">3  Generate App Password</span>
+            </div>
+            <button type="submit" class="btn-submit">Add Account</button>
+        </form>
+        
+    </div>
+</div>
+<div class="right">
+    
+</div>
+{% endblock content %}

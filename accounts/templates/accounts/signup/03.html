@@ -1,0 +1,26 @@
+{% extends "accounts/base.html" %}
+{% block content %}
+<div class="left">
+    <div class="header-section">
+        <h3 class="logo">Logo</h3>
+        <div class="action">
+            <a href="{% url 'register02' %}" class="btn back-btn"><i class="bx bx-chevron-left"></i>Previous</a>
+            <a href="{% url 'register04' %}" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>
+        </div>
+    </div>
+    <div class="form3-section">
+        <h4>Connect your first inbox</h4>
+        <p>Enter a valid email address</p>
+        <form action="">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="name@example.com">
+            <button type="submit" class="btn-submit">Add Account</button>
+            
+        </form>
+        
+    </div>
+</div>
+<div class="right">
+    
+</div>
+{% endblock content %}
