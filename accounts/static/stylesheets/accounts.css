@@ -123,6 +123,7 @@ body {
 }
 .body-container .left .form-section .google-option span {
   display: flex;
+  align-items: center;
   width: 100%;
   color: rgba(0, 0, 0, 0.4);
   font-weight: bold;
