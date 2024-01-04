@@ -16,3 +16,6 @@ def register04(request):
 
 def register05(request):
     return render(request, "accounts/signup/05.html")
+
+def login(request):
+    return render(request, "accounts/login.html")
