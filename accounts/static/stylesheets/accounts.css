@@ -104,7 +104,7 @@ body {
   width: 100%;
   padding: 0.8rem 14px;
   background: black;
-  color: rgba(255, 255, 255, 0.678);
+  color: white;
   border-radius: 5px;
   outline: none;
   border: none;
@@ -119,6 +119,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  box-sizing: border-box;
   gap: 20px;
 }
 .body-container .left .form-section .google-option span {
@@ -145,15 +146,16 @@ body {
   text-align: center;
   padding: 14px;
 }
-.body-container .left .form-section .privacy_notice {
+.body-container .left .form-section .notice {
   padding: 1rem 0;
 }
-.body-container .left .form-section .privacy_notice span {
+.body-container .left .form-section .notice span {
   color: black;
   font-size: 14px;
   font-weight: 500;
 }
-.body-container .left .form-section .privacy_notice span a {
+.body-container .left .form-section .notice span a {
+  font-weight: bold;
   color: black;
 }
 .body-container .left .form2-section {
@@ -345,7 +347,118 @@ body {
     height: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     position: fixed;
+  }
+  .body-container .left {
+    width: 100%;
+    padding: 5px;
+  }
+  .body-container .left .header-section {
+    padding: 0 10px;
+  }
+  .body-container .left .header-section .action {
+    box-sizing: border-box;
+    display: flex;
+    gap: 5px;
+  }
+  .body-container .left .header-section .action .btn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 4px;
+  }
+  .body-container .left .header-section .action .btn i.bx {
+    font-weight: bolder;
+  }
+  .body-container .left .header-section .action .btn.back-btn {
+    padding-right: 12px;
+  }
+  .body-container .left .header-section .action .btn.next-btn {
+    padding-left: 12px;
+  }
+  .body-container .left .form-section {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    left: 0%;
+    position: relative;
+    transform: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .body-container .left .form-section p {
+    font-size: 14px;
+  }
+  .body-container .left .form-section .google-option span {
+    font-size: 12px;
+  }
+  .body-container .left .form-section .google-option a.google {
+    font-size: 16px;
+    padding: 0.8rem 14px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .body-container .left .form-section .notice {
+    padding: 1rem 0;
+    box-sizing: border-box;
+  }
+  .body-container .left .form-section .notice span {
+    font-size: 12px;
+  }
+  .body-container .left .form-section .notice span a {
+    color: black;
+  }
+  .body-container .left .form2-section form h5 {
+    font-size: 14px;
+  }
+  .body-container .left .form2-section form .choices .choice-one label, .body-container .left .form2-section form .choices .choice-two label {
+    font-size: 12px;
+  }
+  .body-container .left .form3-section {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    left: 0%;
+    position: relative;
+    transform: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .body-container .left .form3-section p {
+    font-size: 14px;
+  }
+  .body-container .left .form3-section form label {
+    font-size: 14px;
+  }
+  .body-container .left .form4-section {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    left: 0%;
+    position: relative;
+    transform: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .body-container .left .form4-section h4 {
+    font-size: 26px;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  .body-container .left .form4-section p {
+    font-size: 14px;
+  }
+  .body-container .left .form4-section form label {
+    font-size: 14px;
+  }
+  .body-container .left .form4-section form .steps span.step {
+    font-size: 12px;
+  }
+  .body-container .right {
+    display: none;
   }
 }/*# sourceMappingURL=accounts.css.map */

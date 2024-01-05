@@ -109,7 +109,7 @@ body{
                     width: 100%;
                     padding: .8rem 14px;
                     background: black;
-                    color: rgba(255, 255, 255, 0.678);
+                    color: white;
                     border-radius: 5px;
                     outline: none;
                     border: none;
@@ -126,7 +126,7 @@ body{
                 flex-direction: column;
                 align-items: center;
                 padding: 1rem;
-               
+                box-sizing: border-box;
                 gap: 20px;
                 span{
                     display: flex;
@@ -154,7 +154,7 @@ body{
                    
                 }
             }
-            .privacy_notice{
+            .notice{
                
                 padding: 1rem 0;
                 span{
@@ -162,6 +162,7 @@ body{
                     font-size: 14px;
                     font-weight: 500;
                     a{
+                        font-weight: bold;
                         color: black;
                     }
                 }
@@ -380,8 +381,175 @@ body{
         box-sizing: border-box;
         
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         position: fixed;
+        .left{
+            width: 100%;
+            
+            padding: 5px;
+            .header-section{
+            
+            padding: 0 10px;
+            
+            .action{
+                
+                box-sizing: border-box;
+                display: flex;
+                gap: 5px;
+                .btn{
+                    
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 10px 4px;
+                    i.bx{
+                        font-weight: bolder;
+                    }
+                    &.back-btn{
+                        padding-right: 12px;
+                    }
+                    &.next-btn{
+                        padding-left: 12px;
+                    }
+                }
+            }
+            }
+            .form-section{
+                
+                
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                left: 0%;
+                position: relative;
+                transform:none;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                
+                p{
+                    font-size: 14px;
+                }
+              
+                .google-option{
+                    
+                    span{
+                       
+                        font-size: 12px;
+                    }
+                    a.google{
+                        font-size: 16px;
+                        padding: .8rem 14px;
+                        border: 1px solid rgba(0, 0, 0, 0.11);
+                        border-radius: 5px;
+                        font-weight: bold;
+                    }
+                }
+                .notice{
+                    
+                    padding: 1rem 0;
+                    box-sizing: border-box;
+                   
+                    span{
+                       
+                        font-size: 12px;
+                       
+                        a{
+                            
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .form2-section{
+                form{
+                    h5{
+                        font-size: 14px;
+                        
+                    }
+                    .choices{
+                        .choice-one,.choice-two{
+                            
+                            label{
+                                font-size: 12px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .form3-section{
+                
+                
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                left: 0%;
+                position: relative;
+                transform:none;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                
+                p{
+                    font-size: 14px;
+                }
+                form{
+                    
+                    label{
+                        font-size: 14px;
+                        
+                    }
+                    
+                        
+                   
+                    
+                }
+                
+                
+            }
+            .form4-section{
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                left: 0%;
+                position: relative;
+                transform:none;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                h4{
+                    font-size: 26px;
+                    margin-bottom: 0;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: 14px;
+                }
+                form{
+                    
+                    label{
+                        font-size: 14px;
+                        
+                    }
+                    
+                        
+                    .steps{
+                       
+                        span.step{
+                           
+                            font-size: 12px;
+                        }
+                    }
+                    
+                }
+              
+                
+            }
+
+        }
+        .right{
+            display: none;
+        }
         
     }
 }
