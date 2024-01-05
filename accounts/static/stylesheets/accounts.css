@@ -235,10 +235,10 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.11);
 }
 .body-container .left .form3-section form input::-moz-placeholder {
-  font-weight: bold;
+  font-weight: 500;
 }
 .body-container .left .form3-section form input::placeholder {
-  font-weight: bold;
+  font-weight: 500;
 }
 .body-container .left .form3-section form button {
   width: 100%;
