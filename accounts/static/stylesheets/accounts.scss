@@ -28,11 +28,16 @@ body{
             height: 10%;
             display: flex;
             align-items: center;
+           
             justify-content: space-between;
             padding: 0 20px;
-            h3.logo{
-                font-size: 24px;
+            .logo{
+                
                 font-weight: bold;
+                padding-top: .5rem;
+                img{
+                    width: 10rem;
+                }
             }
             .action{
                 
@@ -389,29 +394,34 @@ body{
             padding: 5px;
             .header-section{
             
-            padding: 0 10px;
-            
-            .action{
-                
-                box-sizing: border-box;
-                display: flex;
-                gap: 5px;
-                .btn{
+                padding: 0 10px;
+                .logo{
                     
-                    font-size: 14px;
-                    font-weight: bold;
-                    padding: 10px 4px;
-                    i.bx{
-                        font-weight: bolder;
-                    }
-                    &.back-btn{
-                        padding-right: 12px;
-                    }
-                    &.next-btn{
-                        padding-left: 12px;
+                    img{
+                        width: 8rem;
                     }
                 }
-            }
+                .action{
+                    
+                    box-sizing: border-box;
+                    display: flex;
+                    gap: 5px;
+                    .btn{
+                        
+                        font-size: 14px;
+                        font-weight: bold;
+                        padding: 10px 4px;
+                        i.bx{
+                            font-weight: bolder;
+                        }
+                        &.back-btn{
+                            padding-right: 12px;
+                        }
+                        &.next-btn{
+                            padding-left: 12px;
+                        }
+                    }
+                }
             }
             .form-section{
                 

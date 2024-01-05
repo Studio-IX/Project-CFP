@@ -1,8 +1,9 @@
 {% extends "accounts/base.html" %}
+{% load static %}
 {% block content %}
 <div class="left">
     <div class="header-section">
-        <h3 class="logo">Logo</h3>
+        <div class="logo"><img src="{% static 'images/logo.svg' %}" alt=""></div>
         <div class="action">
             <a href="{% url 'register01' %}" class="btn back-btn"><i class="bx bx-chevron-left"></i>Previous</a>
             <a href="{% url 'register03' %}" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>

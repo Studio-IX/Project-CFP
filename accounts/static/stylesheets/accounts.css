@@ -30,9 +30,12 @@ body {
   justify-content: space-between;
   padding: 0 20px;
 }
-.body-container .left .header-section h3.logo {
-  font-size: 24px;
+.body-container .left .header-section .logo {
   font-weight: bold;
+  padding-top: 0.5rem;
+}
+.body-container .left .header-section .logo img {
+  width: 10rem;
 }
 .body-container .left .header-section .action {
   box-sizing: border-box;
@@ -356,6 +359,9 @@ body {
   }
   .body-container .left .header-section {
     padding: 0 10px;
+  }
+  .body-container .left .header-section .logo img {
+    width: 8rem;
   }
   .body-container .left .header-section .action {
     box-sizing: border-box;
