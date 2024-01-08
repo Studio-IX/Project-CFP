@@ -119,6 +119,7 @@ body {
   margin-left: -8%;
   font-size: 18px;
   color: green;
+  display: none;
 }
 .body-container .left .form-section form button {
   width: 100%;
@@ -246,7 +247,12 @@ body {
 .body-container .left .form3-section form label {
   font-weight: 500;
 }
-.body-container .left .form3-section form input {
+.body-container .left .form3-section form .name-field {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.body-container .left .form3-section form .name-field input {
   padding: 14px;
   width: 100%;
   border-radius: 5px;
@@ -254,11 +260,27 @@ body {
   box-sizing: border-box;
   border: 1px solid rgba(0, 0, 0, 0.11);
 }
-.body-container .left .form3-section form input::-moz-placeholder {
-  font-weight: 500;
+.body-container .left .form3-section form .name-field .verify {
+  margin-left: -8%;
+  font-size: 18px;
+  color: green;
+  display: none;
 }
-.body-container .left .form3-section form input::placeholder {
-  font-weight: 500;
+.body-container .left .form3-section form .email-added {
+  width: 100%;
+  display: none;
+  padding: 0.8rem 14px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  color: rgb(44, 155, 44);
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  gap: 20px;
 }
 .body-container .left .form3-section form button {
   width: 100%;

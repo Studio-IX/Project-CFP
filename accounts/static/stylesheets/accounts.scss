@@ -123,6 +123,7 @@ body{
                         margin-left: -8%;
                         font-size: 18px;
                         color: green;
+                        display: none;
                     }
                 }
                 button{
@@ -264,19 +265,42 @@ body{
                 label{
                     font-weight: 500;
                 }
-                input{
-                    padding: 14px;
+                .name-field{
                     width: 100%;
-                    border-radius: 5px;
-                    margin: 0;
-                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    input{
+                        padding: 14px;
+                        width: 100%;
+                        border-radius: 5px;
+                        margin: 0;
+                        box-sizing: border-box;
+                        border: 1px solid rgba(0, 0, 0, 0.11);
+                    }
+                    .verify{
+                        margin-left: -8%;
+                        font-size: 18px;
+                        color: green;
+                        display: none;
+                    }
+                }
+                
+                .email-added{
+                    width: 100%;
+                    display: none;
+                    padding: .8rem 14px;
                     border: 1px solid rgba(0, 0, 0, 0.11);
-                }
-                input::placeholder{
-                    
-                    font-weight: 500;
-                }
-                    
+                    color: rgb(44, 155, 44);
+                    border-radius: 5px;
+                    outline: none;
+                    text-align: center;
+                    box-sizing: border-box;
+                    font-size: 16px;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 600;
+                    gap: 20px;
+                }  
                 
                 button{
                     width: 100%;

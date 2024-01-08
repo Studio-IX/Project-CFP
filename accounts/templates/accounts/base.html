@@ -36,7 +36,17 @@
                 alert("Please fill in all required fields.");
             }
         });
+        
+        $('#email').on('input', function() {
+            var email = $(this).val();
 
+            // Use a regular expression to check if the email is in a valid format
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var isValidEmail = emailRegex.test(email);
+
+            // Toggle the visibility of the check-circle element based on the email validation result
+            $('.verify').toggle(isValidEmail);
+        });
         setTimeout(function() {
             $(".messages").fadeOut();
         }, 4000); // 5000 milliseconds = 5 seconds

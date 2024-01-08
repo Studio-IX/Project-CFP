@@ -1,6 +1,7 @@
 {% extends "accounts/base.html" %}
 {% load static %}
 {% block content %}
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <div class="left">
     <div class="header-section">
         <div class="logo"><img src="{% static 'images/logo.svg' %}" alt=""></div>
@@ -16,8 +17,13 @@
             {% csrf_token %}
             <input type="text" value="{{user_id}}" style="display: none;">
             <label for="email">Email:</label>
-            <input type="email" name="connect_email" id="email" placeholder="name@example.com" required>
-            <button type="submit" class="btn-submit">Add Account</button>
+            <div class="name-field">
+                <input type="email" name="connect_email" id="email" placeholder="name@example.com">
+                
+                <i class="bx bxs-check-circle verify"></i>
+            </div>
+            <span class="email-added">Email Added </span>
+            <button type="button" class="btn-submit">Add Account</button>
             
         </form>
         
@@ -27,4 +33,28 @@
     
 </div>
 
+<script>
+    // var submitBtn = document.querySelector(".btn-submit")
+    // submitBtn.addEventListener("click", () =>{
+    //     document.querySelector(".email-added").style.display = "flex"
+    //     submitBtn.style.display="none"
+    // })
+
+    $(document).ready(function() {
+        $('.btn-submit').click(function() {
+            // Disable or make the email field readonly
+            var email = $('#email').val();
+
+            // Check if the email is not empty and has a valid format
+            var isValidEmail = email !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            // Set display to none for .email-added if conditions are met
+            if (isValidEmail) {
+                $('.email-added').css('display', 'flex');
+                $('.btn-submit').css('display', 'none')
+            }
+            
+        });
+    });
+</script>
 {% endblock content %}

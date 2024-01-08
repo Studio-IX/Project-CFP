@@ -83,7 +83,7 @@ def register05(request):
     t_user_id = request.GET.get("user_id", None)
     if request.method == "POST":
         t_user = TraceUser.objects.get(id=t_user_id)
-        messages.success(request, f'Congratulations,{t_user.user.email}. Your account has been successfully created',
+        messages.success(request, f'Congratulations, {t_user.user.email}. Your account has been successfully created',
                             extra_tags='alert alert-success')
         redirect_url = reverse('login')
         return redirect(redirect_url)
