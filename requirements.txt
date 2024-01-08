@@ -3,6 +3,8 @@ backports.zoneinfo==0.2.1
 decouple==0.0.7
 dj-database-url==2.1.0
 Django==4.2.8
+psycopg==3.1.17
+psycopg2-binary==2.9.9
 python-decouple==3.8
 python-dotenv==1.0.0
 sqlparse==0.4.4
