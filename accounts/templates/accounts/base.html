@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
     <link rel="stylesheet" href="{% static 'stylesheets/accounts.css' %}">
     
     <title>Accounts</title>
@@ -20,6 +21,26 @@
     </div>
 
    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Attach click event to the next-btn element
+        $(".next-btn").click(function() {
+            // Trigger the form submission
+            if ($("form")[0].checkValidity()) {
+        // Trigger the form submission
+                $("form").submit();
+            } else {
+                // If the form is not valid, you can add your own logic here
+                // For example, display an error message or highlight the required fields
+                alert("Please fill in all required fields.");
+            }
+        });
 
+        setTimeout(function() {
+            $(".messages").fadeOut();
+        }, 4000); // 5000 milliseconds = 5 seconds
+    });
+</script>
 </body>
 </html>

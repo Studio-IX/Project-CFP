@@ -6,15 +6,16 @@
         <div class="logo"><img src="{% static 'images/logo.svg' %}" alt=""></div>
         <div class="action">
             <a href="{% url 'register03' %}" class="btn back-btn"><i class="bx bx-chevron-left"></i>Previous</a>
-            <a href="{% url 'register05' %}" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>
+            <div class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></div>
         </div>
     </div>
     <div class="form4-section">
         <h4>Connect your first inbox</h4>
         <p>Three quick steps to connect your account</p>
-        <form action="">
+        <form action="" method="post">
+            {% csrf_token %}
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="name@example.com" value="name@example.com" readonly>
+            <input type="email" name="email" id="email"  value="{{connect_email}}" readonly>
             
             
             <div class="steps">
@@ -23,7 +24,7 @@
                 <span class="step">3  Generate App Password</span>
             </div>
 
-            <button type="submit" class="btn-submit">Add Account</button>
+            <button type="button" class="btn-submit">Verify and Continue</button>
         </form>
         
     </div>

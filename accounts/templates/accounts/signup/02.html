@@ -6,23 +6,25 @@
         <div class="logo"><img src="{% static 'images/logo.svg' %}" alt=""></div>
         <div class="action">
             <a href="{% url 'register01' %}" class="btn back-btn"><i class="bx bx-chevron-left"></i>Previous</a>
-            <a href="{% url 'register03' %}" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>
+            <div class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></div>
         </div>
     </div>
     <div class="form2-section">
-        <h4>Hi, here’s a couple quick questions to help
+        <h4>Hi, here's a couple quick questions to help
             tailor your experience</h4>
         
-        <form action="">
+        <form  method="post">
+            {% csrf_token %}
            <h5>This will help us personalize your experience in Mail</h5>
+           <input type="text" value="{{user_id}}" style="display: none;">
            <div class="choices">
             <div class="choice-one">
                 <label for="choice-one">B2B SaaS</label>
-                <input type="checkbox" name="choice-one" id="choice-one" value="B2B SaaS">
+                <input type="radio" name="choice" id="choice-one" value="B2B_SaaS">
             </div>
             <div class="choice-two">
                 <label for="choice-two">E-Commerce</label>
-                <input type="checkbox" name="choice-two" id="choice-two" value="E-Commerce">
+                <input type="radio" name="choice" id="choice-two" value="E-Commerce">
             </div>
            </div>
         </form>
@@ -32,4 +34,5 @@
 <div class="right">
     
 </div>
+
 {% endblock content %}

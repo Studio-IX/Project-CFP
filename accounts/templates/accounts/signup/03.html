@@ -6,15 +6,17 @@
         <div class="logo"><img src="{% static 'images/logo.svg' %}" alt=""></div>
         <div class="action">
             <a href="{% url 'register02' %}" class="btn back-btn"><i class="bx bx-chevron-left"></i>Previous</a>
-            <a href="{% url 'register04' %}" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>
+            <a href="#" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>
         </div>
     </div>
     <div class="form3-section">
         <h4>Connect your first inbox</h4>
         <p>Enter a valid email address</p>
-        <form action="">
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" value="{{user_id}}" style="display: none;">
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" placeholder="name@example.com">
+            <input type="email" name="connect_email" id="email" placeholder="name@example.com" required>
             <button type="submit" class="btn-submit">Add Account</button>
             
         </form>
@@ -24,4 +26,5 @@
 <div class="right">
     
 </div>
+
 {% endblock content %}

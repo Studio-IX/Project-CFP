@@ -5,18 +5,34 @@
     <div class="header-section">
         <div class="logo"><img src="{% static 'images/logo.svg' %}" alt=""></div>
         <div class="action">
-            <a href="{% url 'register02' %}" class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></a>
+            <div class="btn next-btn">Continue <i class="bx bx-chevron-right"></i></div>
         </div>
     </div>
     <div class="form-section">
+       
         <h4>Create an account</h4>
-        <p>Enter your email below to create your account</p>
-        <form action="">
+        <p>Enter your email and password below to create your account</p>
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                    {{ message }}
+                    
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <form action="" method="post">
+            {% csrf_token %}
             <div class="name-field">
-                <input type="email" name="email" id="email" placeholder="name@example.com">
+                <input type="email" name="email" id="email" placeholder="name@example.com" value="{{existing_mail}}">
+                
                 <i class="bx bxs-check-circle verify"></i>
             </div>
-            <button type="submit" class="btn-submit">Sign in with Email</button>
+            <div class="name-field">
+                <input type="password" name="password" id="password" placeholder="*********" required>
+            </div>
+            <button type="submit" class="btn-submit">Sign up with Email</button>
             
         </form>
         <div class="google-option">

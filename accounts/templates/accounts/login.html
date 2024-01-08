@@ -9,8 +9,19 @@
         </div> -->
     </div>
     <div class="form-section">
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                    {{ message }}
+                    
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
         <h4>Log into your account</h4>
         <p>Enter your email below</p>
+        
         <form action="">
             <div class="name-field">
                 <input type="email" name="email" id="email" placeholder="name@example.com">
