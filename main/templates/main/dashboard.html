@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="{% static 'stylesheets/dashboard.css' %}">
+    
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="body-container">
+        <div class="dashboard-container">
+            <div class="sidebar">
+                <div class="header-section">
+                    <span><i class="bx bx-user"></i> <h5>Alicia Koch</h5></span>
+                </div>
+                <div class="tab-btns">
+                    <li class="active"><a href="#"><i class="bx bx-message"></i>Inbox</a><span>128</span></li>
+                    <li><a href="#"><i class="bx bx-message"></i>Drafts</a><span>9</span></li>
+                    <li><a href="#"><i class="bx bx-message"></i>Sent</a><span></span></li>
+                    <li><a href="#"><i class="bx bx-message"></i>Junk</a><span>23</span></li>
+                    <li><a href="#"><i class="bx bx-message"></i>Trash</a><span></span></li>
+                    <li><a href="#"><i class="bx bx-message"></i>Archive</a><span></span></li>
+                </div>
+                <div class="extra-tab-btns">
+                    <li><a href="#"><i class="bx bx-message"></i>Social</a><span>972</span></li>
+                    <li><a href="#"><i class="bx bx-message"></i>Updates</a><span>342</span></li>
+                    <li><a href="#"><i class="bx bx-message"></i>Forums</a><span>128</span></li>
+                 
+                </div>
+            </div>
+            <div class="content">
+                <div class="header-section">
+                    <h4>Inbox</h4>
+                    <div class="action-btns">
+                        <a href="#" class="btn">All mail</a>
+                        <a href="#" class="btn active">Unread</a>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <form action="" class="search">
+                        <div class="search-box">
+                            <i class="bx bx-search"></i>
+                            <input type="search" name="search" id="search" placeholder="Search">
+                        </div>
+                    </form>
+                    <div class="messages-box">
+                        <div class="message active">
+                            <div class="header-sec">
+                                <h5>William Smith</h5>
+                                <small>2 months ago</small>
+                            </div>
+                            <span>Meeting Tomorrow</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut in voluptates, repellendus dolores aspernatur quasi magnam voluptatum commodi enim aliquam illum nostrum ipsa?</p>
+                            <div class="labels">
+                                <span>meeting</span>
+                                <span class="active">work</span>
+                                <span>important</span>
+                            </div>
+    
+                        </div>
+                        <div class="message">
+                            <div class="header-sec">
+                                <h5>William Smith</h5>
+                                <small>2 months ago</small>
+                            </div>
+                            <span>Meeting Tomorrow</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut in voluptates, repellendus dolores aspernatur quasi magnam voluptatum commodi enim aliquam illum nostrum ipsa?</p>
+                            <div class="labels">
+                                <span>meeting</span>
+                                <span>work</span>
+                                <span class="active">important</span>
+                            </div>
+    
+                        </div>
+                        <div class="message">
+                            <div class="header-sec">
+                                <h5>William Smith</h5>
+                                <small>2 months ago</small>
+                            </div>
+                            <span>Meeting Tomorrow</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aut in voluptates, repellendus dolores aspernatur quasi magnam voluptatum commodi enim aliquam illum nostrum ipsa?</p>
+                            <div class="labels">
+                                <span class="active">meeting</span>
+                                <span>work</span>
+                                <span>important</span>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="header-section">
+                    <div class="left-action-btns">
+                        <a href="#" class="icon-btn"><i class="bx bx-message"></i></a>
+                        <a href="#" class="icon-btn"><i class="bx bx-message"></i></a>
+                        <a href="#" class="icon-btn"><i class="bx bx-message"></i></a>
+                    </div>
+                    <div class="right-action-btns">
+                        <a href="#" class="icon-btn"><i class="bx bx-reply"></i></a>
+                        <a href="#" class="icon-btn"><i class="bx bx-reply"></i></a>
+                        <a href="#" class="icon-btn"><i class="bx bx-reply"></i></a>
+                        <a href="#" class="icon-btn"><i class="bx bx-reply"></i></a>
+                    </div>
+                </div>
+                <div class="main-detail-box">
+                    <div class="message">
+                        <div class="header-sec">
+                            <div class="user-info">
+                                <span>WS</span>
+                                <div class="details">
+                                    <h5>William Smith</h5>
+                                    <small>Meeting Tomorrow</small>
+                                    <p>Reply-To: williamsmith@example.com</p>
+                                </div>
+                            </div>
+                            <div class="right-info">
+                                <span>Oct. 22, 2024, 9:00:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="body-sec">
+                            <p>Hi, let's have a meeting tomorrow to discuss the project. I've been reviewing the project details and have some ideas I'd like to share. It's crucial that we align on our next steps to ensure the project's success.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, est nam expedita eveniet accusamus asperiores.</p>
+                            <p>Best regards, William</p>
+                        </div>
+                    </div>
+                    <div class="message-action">
+                        <form action="">
+                            <textarea name="reply-message" id="reply" placeholder="Reply William Smith..."></textarea>
+                            <div class="optional">
+                                <div class="check">
+                                    <label for="mute-check">Mute this thread</label>
+                                    <input type="checkbox" name="mute-check" id="mute-check" value="mute">
+                                </div>
+                                <button type="submit" class="btn btn-submit">Send</button>
+                            </div>
+                        </form>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</body>
+</html>

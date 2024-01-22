@@ -91,3 +91,4 @@ def register05(request):
 
 def login(request):
     return render(request, "accounts/login.html")
+
