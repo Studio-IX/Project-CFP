@@ -22,7 +22,8 @@
         <h4>Log into your account</h4>
         <p>Enter your email below</p>
         
-        <form action="">
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
             <div class="name-field">
                 <input type="email" name="email" id="email" placeholder="name@example.com">
                 <i class="bx bxs-check-circle verify"></i>

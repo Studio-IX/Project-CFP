@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
 from .models import *
 from django.urls import reverse
 from django.contrib import messages
@@ -89,6 +90,18 @@ def register05(request):
         return redirect(redirect_url)
     return render(request, "accounts/signup/05.html")
 
-def login(request):
+def login_user(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = authenticate(email=email, password=password)
+
+        if user is not None:
+            login(request, user)
+            
+            return redirect("dashboard")
+        else:
+            messages.error(request, "Username Or Password is incorrect!!",
+                           extra_tags='alert alert-warning alert-dismissible fade show')
     return render(request, "accounts/login.html")
 
