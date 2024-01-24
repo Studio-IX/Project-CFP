@@ -172,6 +172,7 @@ body {
   border-radius: 5px;
   text-decoration: none;
   background-color: transparent;
+  font-size: 14px;
   color: var(--text-color);
 }
 .body-container .dashboard-container .content .header-section .action-btns .btn.active {
